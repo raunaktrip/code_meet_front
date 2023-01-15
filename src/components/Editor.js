@@ -37,6 +37,7 @@ function Editor() {
   
 
   function changeVal(newValue) {
+    setVal(newValue);
     socket.emit("code_change", { newValue,roomId });
   }
   useEffect(()=>{
