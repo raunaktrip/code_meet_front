@@ -15,6 +15,15 @@ function NewRoom(){
        toast.success('Created a new Room');
        
   }
+  const copyRoomId=()=>{
+    if(!roomId) {
+      toast.error("Please create a room id first");
+      return;
+    }
+    navigator.clipboard.writeText(roomId);
+    toast.success("Room Id copied to clipboard");
+
+  }
   const joinRoom=()=>{
     if(!(roomId && userName)){
       toast.error('Room Id and Username are required');
@@ -43,7 +52,10 @@ function NewRoom(){
                 onChange={(e)=>{setuserName(e.target.value)} }
                 value={userName}
                ></input>
+               <div style={{display: "flex"}}>
+               <button className="btn btn-copy-code" onClick={copyRoomId}>Copy RoomId</button>
                <button className="btn btn-join" onClick={joinRoom}>Join</button>
+               </div>
                <span className="createInfo">
                   If you don't have an invite create a &nbsp;
                   <a onClick={createNewRoom} href="" className="createNewRoomBtn">new room</a>  

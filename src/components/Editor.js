@@ -59,6 +59,11 @@ function Editor() {
     })
   },[roomId])
 
+  const copyRoomId=()=>{
+    navigator.clipboard.writeText(roomId);
+    toast.success("Room Id copied to clipboard");
+
+  }
   return (
     <div className="root-grid">
       <div className="nav_code_bar">
@@ -69,6 +74,9 @@ function Editor() {
             <option value="javaScript"> JavaScript </option>
             <option value="py"> Python </option>
           </select>
+        </div>
+        <div>
+        <button className="btn btn-copy-code" onClick={copyRoomId}>Copy RoomId</button>
         </div>
         <div>
           <select id="theme" class="btn-theme" onChange={changeTheme}>

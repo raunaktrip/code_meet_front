@@ -46,17 +46,31 @@ a:hover{
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-join{
-    background: #4aee88;
+    background-color: #4aee88;
     width: 100px;
     margin-left: auto;
 }
-.btn-join:hover{
-    background: #2b824c;
+.btn-copy-code{
+    background-color: #4aee88;
+    width: 150px;
+    padding: 5px;
 }
+.btn:focus{
+    background-color: #4aee88;
+    color: black;
+}
+
+.btn:hover{
+    background: #2b824c;
+    color: black;
+}
+
+
 .createInfo{
     margin: 0 auto;
     margin-top: 10px;
