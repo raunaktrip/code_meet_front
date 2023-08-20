@@ -63,7 +63,7 @@ function NewRoom(){
             </div>
           </div>
           <footer>
-            <h6>Made with love💛 </h6>
+            <h6>Made with love 💛 </h6>
         </footer>
         </div>
         </>
